@@ -1,0 +1,190 @@
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --font-primary: "Karla", sans-serif;
+  --color-primary-cyan: hsl(179, 62%, 43%);
+  --color-primary-bright-yellow: hsl(71, 73%, 54%);
+  --color-neutral-light-gray: hsl(204, 43%, 93%);
+  --color-neutral-grayish-blue: hsl(218, 22%, 67%);
+}
+
+/* Base
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-neutral-light-gray);
+  color: #fff;
+  font-family: var(--font-primary);
+  font-size: 1.6em;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+a {
+  color: #9b4dca;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #606c76;
+}
+
+ul {
+  list-style: none;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: var(--font-primary);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Utilities
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 144rem;
+  padding: 2.4rem;
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.card {
+  max-width: 635px;
+  box-shadow: 0 15px 30px 0 hsla(0, 0%, 0%, 0.1);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+.section {
+  background-color: white;
+  padding: 40px;
+}
+
+.section.top {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+  grid-column: 1 / -1;
+}
+
+.section.left {
+  background-color: var(--color-primary-cyan);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.section.right {
+  background-color: #4bbfbd;
+}
+
+.main-headline {
+  color: var(--color-primary-cyan);
+  font-size: 2.4rem;
+  letter-spacing: -0.3px;
+  margin-bottom: 2.4rem;
+}
+
+.sub-headline {
+  font-size: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.section.top .sub-headline {
+  color: var(--color-primary-bright-yellow);
+}
+
+.section.top .description {
+  color: var(--color-neutral-grayish-blue);
+}
+
+.section.left .subscription {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.section.left .subscription .month {
+  opacity: 0.5;
+  margin-left: 1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.section.left .cta {
+  display: inline-block;
+  background-color: var(--color-primary-bright-yellow);
+  border-radius: 5px;
+  padding: 1.5rem;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #fff;
+  margin-top: auto;
+  width: 100%;
+  box-shadow: 0 10px 10px 0 hsla(0, 0%, 0%, 0.1);
+}
+
+.section.right .list {
+  opacity: 0.7;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .section {
+    padding: 24px;
+  }
+
+  .section.top {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .section.right {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .section.left .cta {
+    margin-top: 2.6rem;
+  }
+}
