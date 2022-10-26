@@ -24,6 +24,12 @@ body {
   font-size: 1.6em;
   font-weight: 400;
   line-height: 26px;
+  min-height: 100vh;
+  padding: 6rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -60,18 +66,6 @@ h6 {
 
 /* Utilities
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.container {
-  position: relative;
-  margin: 0 auto;
-  max-width: 144rem;
-  padding: 2.4rem;
-  width: 100%;
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 /* Styles
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -117,6 +111,7 @@ h6 {
 .sub-headline {
   font-size: 1.8rem;
   margin-bottom: 1.8rem;
+  font-weight: 700;
 }
 
 .section.top .sub-headline {
